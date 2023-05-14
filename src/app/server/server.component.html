@@ -1,1 +1,20 @@
 <h3>Hello It's me Server Component</h3>
+<p>{{'Server'}} With ID {{ServerId}} and my status is {{ServerStatus}} With Message {{GetServerMsg()}}</p>
+<input type="text"
+class="form-control"
+(input)="OnServerNameChange($event)"/>
+
+<label class="form-control">{{ServerName}}</label>
+
+
+<input type="text"
+[(ngModel)] = "ServerName"/>
+
+<button class="btn btn-primary" 
+[disabled] = "!allowNewServer"
+(click) = "OnServerCreation()"> Add New Server</button>
+
+
+<!-- <p>{{ServerCreationStatus}}</p> -->
+<p *ngIf="IsServerCreated">{{ServerCreationStatus}}</p>
+
