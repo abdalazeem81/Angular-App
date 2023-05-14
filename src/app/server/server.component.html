@@ -16,5 +16,8 @@ class="form-control"
 
 
 <!-- <p>{{ServerCreationStatus}}</p> -->
-<p *ngIf="IsServerCreated">{{ServerCreationStatus}}</p>
+<p *ngIf="IsServerCreated; else noServer">{{ServerCreationStatus}}</p>
+<ng-template #noServer>
+    <p>No Server Creation!</p>
+</ng-template>
 
