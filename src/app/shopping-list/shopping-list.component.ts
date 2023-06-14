@@ -12,4 +12,7 @@ ingredients: Ingredient[] = [
   new Ingredient('Flower', 1),
   new Ingredient('Milk', .5)
 ];
+AddIngredient(newIngrdient: Ingredient){
+  this.ingredients.push(newIngrdient);
+}
 }
